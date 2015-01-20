@@ -1,0 +1,14 @@
+colorize
+========
+
+A clean, visually distinguishing feature for your iterm2.
+
+Colorize provides a script to randomly change the background color (and tab
+color) of every new terminal when it starts, giving you a quick mnemonic for
+remembering which windows are which.
+
+The script just prints out some escape codes using iterm2's proprietary codes:
+https://code.google.com/p/iterm2/wiki/ProprietaryEscapeCodes
+
+The colors are subtle and off-black, the defaults tend away from reds (because
+I don't like them as much).
