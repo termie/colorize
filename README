@@ -12,3 +12,6 @@ https://code.google.com/p/iterm2/wiki/ProprietaryEscapeCodes
 
 The colors are subtle and off-black, the defaults tend away from reds (because
 I don't like them as much).
+
+The other script in here is a zsh prompt script to give you a random color for
+each directory you are in.

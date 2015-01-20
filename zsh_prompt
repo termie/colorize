@@ -1,0 +1,23 @@
+# Add this somewhere in your .zshrc
+# and then add $(__prompt_color) to your PROMPT
+
+function __prompt_color()
+{
+  local RGB CONVERTED RH GH BH RD GD BD
+  RGB=$(echo $(pwd) | md5 | cut -c 1-6)
+
+  RH=$(echo ${RGB} | cut -c 1-2)
+  GH=$(echo ${RGB} | cut -c 3-4)
+  BH=$(echo ${RGB} | cut -c 5-6)
+
+  RD=$(( 16#${RH}))
+  GD=$(( 16#${GH}))
+  BD=$(( 16#${BH}))
+
+  RD=$((${RD} / 8))
+  GD=$((${GD} / 5))
+  BD=$((${BD} / 5))
+
+  CONVERTED=$(printf "%2x%2x%2x" ${RD} ${GD} ${BD})
+  echo -n "\033]Ph${CONVERTED}\033\\"
+}
