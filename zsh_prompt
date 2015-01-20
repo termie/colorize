@@ -1,5 +1,5 @@
 # Add this somewhere in your .zshrc
-# and then add $(__prompt_color) to your PROMPT
+# and then add %{$(__prompt_color)%} to your PROMPT
 
 function __prompt_color()
 {
